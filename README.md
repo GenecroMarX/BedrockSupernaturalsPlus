@@ -1,5 +1,5 @@
 # Bedrock Supernaturals+
-The Bedrock Supernaturals+ add-on pack is an open-source repository where developers can insert their self-made fantasy/sci-fi-styled mobs. 
+The Bedrock Supernaturals+ add-on pack is an open-source repository where add-on developers can collaborate and mash in their self-made fantasy/sci-fi-styled mobs.
 
 ## Download Links
 Bedrock Supernaturals is still under development, download links will come soon.
