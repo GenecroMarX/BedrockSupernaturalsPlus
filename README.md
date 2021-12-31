@@ -10,7 +10,7 @@ The add-on pack is an extension of Genecro's Supernaturals, aiming to gather mor
 ## Contribution
 To contribute, simply join this Discord invite link https://discord.gg/h4Q6mfGrh3 and contact GenecroMarX#5117.
 
-The default namespace is "bsn" and the files should be properly nested as shown in .BP/ and .RP/ and their following subfolders.
+There is no default namespace, use a genecic form of your username as the namespace for every add-on elemeent you submit. For example, I, GenecroMarX, will use the namespace "genecro" for my custom entities.
 
 Make sure that you own or have the permission for the mobs or any other add-on elements that are to be submitted. Do not forget insert your name inside your files (as a comment) to make sure that we'll be able to track who made what.
 
