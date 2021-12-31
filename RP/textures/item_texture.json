@@ -1,0 +1,20 @@
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "genecro:bloodstone_gem": {"textures": "textures/items/bloodstone_gem"},
+        "genecro:purified_bloodstone_gem": {"textures": "textures/items/purified_bloodstone_gem"},
+        "genecro:condensed_vampire_specimen": {"textures": "textures/items/condensed_vampire_specimen"},
+        "genecro:vampire_head": {"textures": "textures/items/vampire_head"},
+        "genecro:buffed_vampire_head": {"textures": "textures/items/buffed_vampire_head"},
+        "genecro:bloodstone_shards": {"textures": "textures/items/bloodstone_shards"},
+        "genecro:purified_bloodstone_shards": {"textures": "textures/items/purified_bloodstone_shards"},
+        "genecro:bloodstone_golem_egg": {"textures": "textures/items/bloodstone_golem_egg"},
+        "genecro:holy_water": {"textures": "textures/items/holy_water"},
+        "genecro:purifying_stake": {"textures": "textures/items/purifying_stake"},
+        "genecro:vampire_stake": {"textures": "textures/items/vampire_stake"},
+        "genecro:werewolf_claws": {"textures": "textures/items/werewolf_claws"},
+        "genecro:purifier_totem": {"textures": "textures/items/purifier_totem"},
+        "genecro:ominous_totem": {"textures": "textures/items/ominous_totem"}
+    }
+}

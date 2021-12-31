@@ -1,0 +1,23 @@
+{
+    "format_version": "1.8.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "genecro:vampire_bat_transformation",
+            "materials": {"default": "bat"},
+            "textures": {"default": "textures/entity/vampire/vampire_boss/bat_transformation"},
+            "geometry": {"default": "geometry.bat"},
+            "scripts": {
+                "scale": "0.35",
+                "pre_animation": [
+                    "variable.tcos0 = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+                    "variable.wobble = Math.sin(query.swell_amount * 5730) * query.swell_amount * 0.01 + 1.0;",
+                    "variable.swelling_scale1 = (Math.pow(Math.clamp(query.swell_amount, 0.0, 1.0), 4.0) * 0.4 + 1.0) * variable.wobble;",
+                    "variable.flash = Math.mod(Math.Round(query.swell_amount * 10.0), 2.0);"
+                ]
+            },
+            "animations": {"resting": "animation.vampire_bat_transformation.resting", "flying": "animation.vampire_bat_transformation.flying"},
+            "animation_controllers": [{"move": "controller.animation.bat.move"}],
+            "render_controllers": ["controller.render.vampire_bat_transformation"]
+        }
+    }
+}

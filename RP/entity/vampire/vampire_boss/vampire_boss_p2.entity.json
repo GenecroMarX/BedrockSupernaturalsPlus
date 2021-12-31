@@ -1,0 +1,38 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "genecro:vampire_boss_p2",
+      "materials": {
+        "default": "entity_emissive_alpha"
+      },
+      "textures": {
+        "default": "textures/entity/vampire/vampire_boss/vampire_boss"
+      },
+      "geometry": {
+        "default": "geometry.vampirehd"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "animate": [
+          "controller_general",
+          "controller_move"
+        ]
+      },
+      "animations": {
+        "general": "animation.vampire_boss.general",
+        "casting": "animation.vampire_boss.casting",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.vampire_boss.move",
+        "celebrating": "animation.vampire_boss.celebrating",
+        "controller_general": "controller.animation.vampire_boss.general",
+        "controller_move": "controller.animation.vampire_boss.move"
+      },
+      "particle_effects": {
+        "spell": "minecraft:evoker_spell"
+      },
+      "render_controllers": [ "controller.render.default" ],
+	  "enable_attachables": true
+    }
+  }
+}

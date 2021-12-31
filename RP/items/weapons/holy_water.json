@@ -1,0 +1,7 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:holy_water", "category": "equipment"},
+        "components": {"minecraft:icon": "genecro:holy_water", "minecraft:render_offsets": "miscellaneous"}
+    }
+}

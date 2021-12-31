@@ -1,0 +1,7 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:bloodstone_shards", "category": "items"},
+        "components": {"minecraft:icon": "genecro:bloodstone_shards", "minecraft:render_offsets": "miscellaneous"}
+    }
+}

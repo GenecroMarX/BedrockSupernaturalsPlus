@@ -1,0 +1,7 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:vampire_stake", "category": "equipment"},
+        "components": {"minecraft:icon": "genecro:vampire_stake", "minecraft:render_offsets": "miscellaneous"}
+    }
+}

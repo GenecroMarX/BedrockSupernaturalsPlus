@@ -1,0 +1,7 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:ominous_totem", "category": "items"},
+        "components": {"minecraft:icon": "genecro:ominous_totem", "minecraft:render_offsets": "miscellaneous"}
+    }
+}

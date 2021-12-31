@@ -1,0 +1,7 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:bloodstone_gem", "category": "items"},
+        "components": {"minecraft:icon": "genecro:bloodstone_gem", "minecraft:render_offsets": "miscellaneous"}
+    }
+}
