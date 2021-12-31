@@ -1,0 +1,62 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Genecro's Supernaturals BP",
+        "description": "Behavior pack for Genecro's Supernaturals, created by §b@GenecroMarcus §fonly at §aMCPEDL§f. Choose between §eNormal §for §cBloodlust §fmode by using the cogwheel icon, do not forget to turn on Experimental togges!",
+        "uuid": "b7c24d15-4e7e-b095-4595-427933cc3ca3",
+        "version": [
+            2,
+            0,
+            0
+        ],
+        "min_engine_version": [
+            1,
+            16,
+            0
+        ]
+    },
+    "metadata": {
+        "authors": [
+            "G3NECRX"
+        ],
+        "generated_with": {
+            "bridge": [
+                "2.1.5"
+            ]
+        }
+    },
+    "modules": [
+        {
+            "description": "Behavior pack for Genecro's Supernaturals, created by §b@GenecroMarcus §fonly at §aMCPEDL§f. Choose between §eNormal §for §cBloodlust §fmode by going to the Behavior Pack settings (cogwheel icon), do not forget to turn on Experimental togges!",
+            "version": [
+                2,
+                0,
+                0
+            ],
+            "uuid": "d69f08d0-0f11-a06b-47cd-7d61e6d7d947",
+            "type": "data"
+        }
+    ],
+    "subpacks": [
+        {
+            "folder_name": "normal",
+            "name": "Normal Mode",
+            "memory_tier": 0
+        },
+        {
+            "folder_name": "bloodlust",
+            "name": "Bloodlust Mode",
+            "memory_tier": 1
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "b672152c-89f1-a1da-5304-b1f0d31f39ca",
+            "version": [
+                2,
+                0,
+                0
+            ]
+        }
+    ]
+}

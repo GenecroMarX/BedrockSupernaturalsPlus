@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.vboss_death": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "dead": "!query.is_alive"
+                        }
+                    ]
+                },
+                "dead": {
+                    "on_entry": [
+                        "/say It seems that you have defeated me, but I shall come back!",
+                        "/effect @a[r=32] nausea 10 255"
+                    ]
+                }
+            }
+        }
+    }
+}

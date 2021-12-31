@@ -1,0 +1,9 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_furnace": {
+        "description": {"identifier": "genecro:bloodstone_gem"},
+        "tags": ["blast_furnace", "furnace"],
+        "input": "genecro:bloodstone_shards",
+        "output": "genecro:bloodstone_gem"
+    }
+}

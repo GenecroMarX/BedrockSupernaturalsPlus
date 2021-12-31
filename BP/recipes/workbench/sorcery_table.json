@@ -1,0 +1,15 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {"identifier": "vamipres:sorcery_table"},
+        "tags": ["crafting_table"],
+        "pattern": ["ABA", "CDC", "CCC"],
+        "key": {
+            "A": {"item": "minecraft:iron_ingot", "data": 0},
+            "B": {"item": "minecraft:lapis_lazuli", "data": 0},
+            "C": {"item": "minecraft:diamond", "data": 0},
+            "D": {"item": "genecro:purified_bloodstone_block", "data": 0}
+        },
+        "result": {"item": "genecro:sorcery_table", "count": 1}
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {"identifier": "genecro:bloodstone_shards"},
+        "tags": ["crafting_table"],
+        "pattern": ["AAA", "AAA", "AAA"],
+        "key": {"A": {"item": "genecro:condensed_vampire_specimen", "data": 0}},
+        "result": {"item": "genecro:bloodstone_shards", "count": 1}
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:ominous_totem", "category": "items"},
+        "components": {
+            "minecraft:icon": {"texture": "genecro:ominous_totem"},
+            "minecraft:display_name": {"value": "Ominous Totem"},
+            "minecraft:creative_category": {"parent": "itemGroup.name.items"}
+        }
+    }
+}

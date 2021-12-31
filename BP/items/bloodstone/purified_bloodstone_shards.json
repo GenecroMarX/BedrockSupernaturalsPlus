@@ -1,0 +1,11 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:purified_bloodstone_shards", "category": "items"},
+        "components": {
+            "minecraft:icon": {"texture": "genecro:purified_bloodstone_shards"},
+            "minecraft:display_name": {"value": "Purified Bloodstone Shards"},
+            "minecraft:creative_category": {"parent": "itemGroup.name.items"}
+        }
+    }
+}

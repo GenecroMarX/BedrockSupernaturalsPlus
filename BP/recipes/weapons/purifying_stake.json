@@ -1,0 +1,10 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {"identifier": "purifying_stake"},
+        "tags": ["sorcery_table"],
+        "pattern": ["A", "A", "B"],
+        "key": {"A": {"item": "genecro:purified_bloodstone_gem", "data": 0}, "B": {"item": "minecraft:stick", "data": 0}},
+        "result": {"item": "genecro:purifying_stake", "count": 1}
+    }
+}

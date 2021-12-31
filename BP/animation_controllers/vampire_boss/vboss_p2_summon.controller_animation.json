@@ -1,0 +1,11 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.vboss_p2_summon": {
+            "states": {
+                "default": {"transitions": [{"on_summon": "1"}]},
+                "on_summon": {"on_entry": ["/summon genecro:bloodstone_golem", "/say Is that all you've got?"]}
+            }
+        }
+    }
+}

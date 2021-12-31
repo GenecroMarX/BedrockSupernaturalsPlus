@@ -1,0 +1,10 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {"identifier": "genecro:purified_bloodstone_gem"},
+        "tags": ["crafting_table"],
+        "pattern": ["AAA", "AAA", "AAA"],
+        "key": {"A": {"item": "genecro:purified_bloodstone_shards", "data": 0}},
+        "result": {"item": "genecro:purified_bloodstone_gem", "count": 1}
+    }
+}

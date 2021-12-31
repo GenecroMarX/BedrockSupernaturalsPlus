@@ -1,0 +1,11 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {"identifier": "genecro:bloodstone_gem", "category": "items"},
+        "components": {
+            "minecraft:icon": {"texture": "genecro:bloodstone_gem"},
+            "minecraft:display_name": {"value": "Bloodstone Gem"},
+            "minecraft:creative_category": {"parent": "itemGroup.name.items"}
+        }
+    }
+}

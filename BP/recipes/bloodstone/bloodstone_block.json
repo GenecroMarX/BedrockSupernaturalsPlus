@@ -1,0 +1,10 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {"identifier": "genecro:bloodstone_block"},
+        "tags": ["crafting_table"],
+        "pattern": ["AAA", "AAA", "AAA"],
+        "key": {"A": {"item": "genecro:bloodstone_gem", "data": 0}},
+        "result": {"item": "genecro:bloodstone_block", "count": 1}
+    }
+}

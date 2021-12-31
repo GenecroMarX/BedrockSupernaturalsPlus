@@ -1,0 +1,25 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.vboss_p1_summon": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "on_summon": "1"
+                        }
+                    ]
+                },
+                "on_summon": {
+                    "on_entry": [
+                        "/effect @a[r=32] blindness 5 255",
+                        "/say Peace was never an option.",
+                        "/effect @a[r=32] levitation 5 2",
+                        "/summon minecraft:lightning_bolt",
+                        "/effect @a[r=32] nausea 10 255"
+                    ]
+                }
+            }
+        }
+    }
+}

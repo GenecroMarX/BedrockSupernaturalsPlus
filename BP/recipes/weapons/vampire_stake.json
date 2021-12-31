@@ -1,0 +1,10 @@
+{
+    "format_version": "1.12",
+    "minecraft:recipe_shaped": {
+        "description": {"identifier": "vampire_stake"},
+        "tags": ["sorcery_table"],
+        "pattern": ["A", "B"],
+        "key": {"A": {"item": "genecro:werewolf_claws", "data": 0}, "B": {"item": "minecraft:stick", "data": 0}},
+        "result": {"item": "genecro:vampire_stake", "count": 1}
+    }
+}

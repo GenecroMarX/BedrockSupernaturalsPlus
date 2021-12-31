@@ -1,0 +1,29 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:block": {
+        "description": {"identifier": "genecro:sorcery_table", "category": "Nature", "properties": {"block:rotation": [0, 1, 2, 3, 4, 5, 6]}},
+        "components": {
+            "minecraft:loot": "loot_tables/blocks/workbench/sorcery_table.json",
+            "minecraft:destroy_time": 1,
+            "minecraft:explosion_resistance": 1,
+            "minecraft:material_instances": {
+                "up": {"texture": "sorcery_table_top", "ambient_occlusion": true, "face_dimming": true, "render_method": "alpha_test"},
+                "down": {"texture": "sorcery_table_bottom", "ambient_occlusion": true, "face_dimming": true, "render_method": "alpha_test"},
+                "north": {"texture": "sorcery_table_front", "render_method": "alpha_test", "face_dimming": true, "ambient_occlusion": true},
+                "east": {"texture": "sorcery_table_side", "render_method": "alpha_test", "face_dimming": true, "ambient_occlusion": true},
+                "west": {"texture": "sorcery_table_side", "render_method": "alpha_test", "face_dimming": true, "ambient_occlusion": true},
+                "south": {"texture": "sorcery_table_side", "render_method": "alpha_test", "face_dimming": true, "ambient_occlusion": true}
+            },
+            "minecraft:unit_cube": {},
+            "minecraft:entity_collision": true,
+            "minecraft:crafting_table": {"custom_description": "Sorcery", "grid_size": 3, "crafting_tags": ["sorcery_table"]},
+            "minecraft:creative_category": {"category": "nature"}
+        },
+        "permutations": [
+            {"condition": "query.block_property('block:rotation') == 2", "components": {"minecraft:rotation": [0, 0, 0]}},
+            {"condition": "query.block_property('block:rotation') == 3", "components": {"minecraft:rotation": [0, -180, 0]}},
+            {"condition": "query.block_property('block:rotation') == 4", "components": {"minecraft:rotation": [0, 90, 0]}},
+            {"condition": "query.block_property('block:rotation') == 5", "components": {"minecraft:rotation": [0, -90, 0]}}
+        ]
+    }
+}

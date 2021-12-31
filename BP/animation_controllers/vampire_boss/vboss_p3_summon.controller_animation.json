@@ -1,0 +1,22 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.vboss_p3_summon": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "on_summon": "1"
+                        }
+                    ]
+                },
+                "on_summon": {
+                    "on_entry": [
+                        "/effect @a[r=32] blindness 3 255",
+                        "/say You will never be able to catch me!"
+                    ]
+                }
+            }
+        }
+    }
+}

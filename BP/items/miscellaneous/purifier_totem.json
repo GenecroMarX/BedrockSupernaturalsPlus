@@ -1,0 +1,20 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "genecro:purifier_totem",
+            "category": "items"
+        },
+        "components": {
+            "minecraft:icon": {
+                "texture": "genecro:purifier_totem"
+            },
+            "minecraft:display_name": {
+                "value": "Purifier Totem"
+            },
+            "minecraft:creative_category": {
+                "parent": "itemGroup.name.items"
+            }
+        }
+    }
+}
