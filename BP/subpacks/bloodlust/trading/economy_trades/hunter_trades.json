@@ -1,0 +1,100 @@
+{
+    "tiers": [
+        {
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "item": "genecro:bloodstone_gem",
+                            "quantity": {
+                                "min": 24,
+                                "max": 32
+                            }
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "genecro:holy_water"
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "genecro:bloodstone_block",
+                            "quantity": {
+                                "min": 13,
+                                "max": 20
+                            }
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "genecro:purified_bloodstone_gem"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "item": "genecro:condensed_vampire_specimen",
+                            "quantity": {
+                                "min": 36,
+                                "max": 40
+                            }
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "minecraft:emerald"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "trades": [
+                {
+                    "wants": [
+                        {
+                            "item": "genecro:vampire_stake",
+                            "quantity": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "genecro:purifying_stake",
+                            "quantity": {
+                                "min": 1,
+                                "max": 3
+                            }
+                        }
+                    ]
+                },
+                {
+                    "wants": [
+                        {
+                            "item": "minecraft:emerald",
+                            "quantity": {
+                                "min": 4,
+                                "max": 7
+                            }
+                        }
+                    ],
+                    "gives": [
+                        {
+                            "item": "genecro:sorcery_table"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

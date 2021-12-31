@@ -1,0 +1,278 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "genecro:vampire_boss_p2",
+            "is_spawnable": false,
+            "is_summonable": true,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "vboss_p2_summon",
+                    "vboss_death"
+                ]
+            },
+            "animations": {
+                "vboss_p2_summon": "controller.animation.vboss_p2_summon",
+                "vboss_death": "controller.animation.vboss_death"
+            }
+        },
+        "component_groups": {
+            "genecro:vboss_calm": {
+                "minecraft:on_target_acquired": {
+                    "event": "genecro:become_angry"
+                },
+                "minecraft:movement": {
+                    "value": 0.48
+                }
+            },
+            "genecro:vboss_angry": {
+                "minecraft:angry": {
+                    "calm_event": {
+                        "event": "genecro:become_calm",
+                        "target": "self"
+                    },
+                    "duration": 25
+                },
+                "minecraft:movement": {
+                    "value": 0.51
+                },
+                "minecraft:behavior.ranged_attack": {
+                    "priority": 3,
+                    "burst_shots": 10,
+                    "burst_interval": 0.3,
+                    "charge_charged_trigger": 0,
+                    "charge_shoot_trigger": 4,
+                    "attack_interval_min": 3,
+                    "attack_interval_max": 5,
+                    "attack_radius": 16
+                },
+                "minecraft:behavior.summon_entity": {
+                    "priority": 0,
+                    "summon_choices": [
+                        {
+                            "min_activation_range": 3,
+                            "weight": 3,
+                            "cooldown_time": 10,
+                            "cast_duration": 2,
+                            "particle_color": "#CE2727",
+                            "start_sound_event": "cast.spell",
+                            "sequence": [
+                                {
+                                    "shape": "line",
+                                    "target": "self",
+                                    "base_delay": 0,
+                                    "delay_per_summon": 0.1,
+                                    "num_entities_spawned": 30,
+                                    "entity_type": "minecraft:lightning_bolt",
+                                    "size": 20,
+                                    "entity_lifespan": 3
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "minecraft:teleport": {
+                    "random_teleports": true,
+                    "max_random_teleport_time": 30,
+                    "random_teleport_cube": [
+                        5,
+                        5,
+                        5
+                    ],
+                    "target_distance": 10,
+                    "target_teleport_chance": 0.05,
+                    "light_teleport_chance": 0.05
+                }
+            }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:type_family": {
+                "family": [
+                    "vampire",
+                    "monster",
+                    "mob",
+                    "vampire_boss"
+                ]
+            },
+            "minecraft:is_shaking": {},
+            "minecraft:boss": {
+                "should_darken_sky": true,
+                "hud_range": 125,
+                "name": "[Phase 2] Vampire Boss"
+            },
+            "minecraft:physics": {
+                "has_gravity": true,
+                "has_collision": true
+            },
+            "minecraft:scale": {
+                "value": 1.5
+            },
+            "minecraft:collision_box": {
+                "height": 1.8,
+                "width": 0.6
+            },
+            "minecraft:pushable": {
+                "is_pushable": true,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:breathable": {
+                "totalSupply": 20,
+                "suffocateTime": 0,
+                "breathes_water": true
+            },
+            "minecraft:health": {
+                "value": 600,
+                "max": 600
+            },
+            "minecraft:shooter": {
+                "def": "minecraft:fireball"
+            },
+            "minecraft:underwater_movement": {
+                "value": 0.048
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "cause": "fall",
+                    "deals_damage": false
+                }
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:navigation.walk": {
+                "is_amphibious": true,
+                "can_path_over_water": true,
+                "can_pass_doors": true,
+                "can_open_doors": true,
+                "can_walk": true,
+                "avoid_water": true
+            },
+            "minecraft:annotation.open_door": {},
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:behavior.float": {
+                "priority": 0
+            },
+            "minecraft:behavior.avoid_mob_type": {
+                "priority": 2,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "max_dist": 8,
+                        "walk_speed_multiplier": 0.6,
+                        "sprint_speed_multiplier": 0.6
+                    }
+                ]
+            },
+            "minecraft:behavior.move_indoors": {
+                "priority": 5,
+                "speed_multiplier": 0.8
+            },
+            "minecraft:behavior.open_door": {
+                "priority": 6,
+                "close_door_after": true
+            },
+            "minecraft:behavior.random_stroll": {
+                "priority": 11,
+                "speed_multiplier": 0.6
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/entities/vampire/vampire_boss.json"
+            },
+            "minecraft:behavior.look_at_player": {
+                "priority": 12,
+                "look_distance": 8,
+                "probability": 0.02
+            },
+            "minecraft:behavior.look_at_entity": {
+                "priority": 12
+            },
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 3
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 4,
+                "within_radius": 32,
+                "must_reach": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "player"
+                                },
+                                {
+                                    "test": "is_family",
+                                    "subject": "other",
+                                    "value": "werewolf"
+                                }
+                            ]
+                        },
+                        "max_dist": 32,
+                        "must_see": false
+                    }
+                ]
+            },
+            "minecraft:persistent": {},
+            "minecraft:follow_range": {
+                "value": 64
+            },
+            "minecraft:on_death": {
+                "event": "genecro:pre_p3",
+                "target": "self"
+            },
+            "minecraft:conditional_bandwidth_optimization": {}
+        },
+        "events": {
+            "minecraft:entity_transformed": {
+                "add": {
+                    "component_groups": [
+                        "genecro:vboss_angry"
+                    ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "genecro:vboss_calm"
+                    ]
+                }
+            },
+            "genecro:become_calm": {
+                "add": {
+                    "component_groups": [
+                        "genecro:vboss_calm"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "genecro:vboss_angry"
+                    ]
+                }
+            },
+            "genecro:become_angry": {
+                "add": {
+                    "component_groups": [
+                        "genecro:vboss_angry"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "genecro:vboss_calm"
+                    ]
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,171 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:entity": {
+        "description": {"identifier": "genecro:wereager_wolf", "is_spawnable": false, "is_summonable": true, "is_experimental": false},
+        "component_groups": {
+            "genecro:look_to_start_villager_transformation": {
+                "minecraft:environment_sensor": {
+                    "triggers": {"filters": {"test": "is_daytime", "value": true}, "event": "genecro:start_transforming"}
+                }
+            },
+            "genecro:start_villager_transformation": {
+                "minecraft:environment_sensor": {
+                    "triggers": {"filters": {"test": "is_daytime", "value": false}, "event": "genecro:stop_transforming"}
+                },
+                "minecraft:timer": {"looping": false, "time": 1, "time_down_event": {"event": "genecro:convert_to_villager"}}
+            },
+            "genecro:convert_to_villager": {
+                "minecraft:transformation": {
+                    "into": "genecro:wereager",
+                    "transformation_sound": "convert_to_drowned",
+                    "drop_equipment": true,
+                    "delay": {"value": 2}
+                },
+                "minecraft:is_shaking": {}
+            },
+            "genecro:wereager_calm": {
+                "minecraft:on_target_acquired": {"event": "genecro:become_hostile", "target": "self"},
+                "minecraft:movement": {"value": 0.28}
+            },
+            "genecro:wereager_angry": {
+                "minecraft:angry": {
+                    "calm_event": {"event": "genecro:become_calm", "target": "self"},
+                    "broadcast_anger": true,
+                    "broadcast_targets": ["werewolf"],
+                    "broadcast_range": 16,
+                    "duration": 25
+                },
+                "minecraft:movement": {"value": 0.32},
+                "minecraft:behavior.melee_attack": {"priority": 1}
+            }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:nameable": {},
+            "minecraft:type_family": {"family": ["villager", "werewolf", "monster", "mob", "wereager"]},
+            "minecraft:collision_box": {"width": 0.6, "height": 1.9},
+            "minecraft:despawn": {"despawn_from_distance": {}},
+            "minecraft:experience_reward": {"on_death": 70},
+            "minecraft:loot": {"table": "loot_tables/entities/werewolf/wereager.json"},
+            "minecraft:physics": {"has_gravity": true, "has_collision": true},
+            "minecraft:pushable": {"is_pushable": true, "is_pushable_by_piston": true},
+            "minecraft:health": {"value": 70, "max": 70},
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {"filters": {"test": "in_lava", "subject": "self", "operator": "==", "value": true}, "cause": "lava", "damage_per_tick": 2}
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "operator": "==",
+                                        "value": "genecro:purifying_stake",
+                                        "subject": "other"
+                                    }
+                                ]
+                            }
+                        },
+                        "damage_multiplier": 15
+                    }
+                ]
+            },
+            "minecraft:breathable": {
+                "total_supply": 20,
+                "suffocate_time": 0,
+                "breathes_air": true,
+                "breathes_water": false,
+                "generates_bubbles": false
+            },
+            "minecraft:attack": {"damage": 7},
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:navigation.walk": {"is_amphibious": true, "can_pass_doors": true, "can_walk": true, "can_break_doors": true},
+            "minecraft:behavior.move_towards_target": {"priority": 2, "speed_multiplier": 0.9, "within_radius": 32},
+            "minecraft:annotation.break_door": {},
+            "minecraft:persistent": {},
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {"filters": [{"all_of": [{"test": "is_daytime", "value": true}]}], "event": "genecro:start_transforming", "target": "self"}
+                ]
+            },
+            "minecraft:behavior.random_stroll": {"priority": 5, "speed_multiplier": 0.8},
+            "minecraft:behavior.look_at_player": {"priority": 8, "look_distance": 6, "probability": 0.02},
+            "minecraft:behavior.random_look_around": {"priority": 7},
+            "minecraft:on_hurt": {"event": "genecro:become_hostile", "target": "self"},
+            "minecraft:on_target_escape": {"event": "genecro:become_calm", "target": "self"},
+            "minecraft:behavior.hurt_by_target": {
+                "priority": 2,
+                "alert_same_type": true,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {"test": "is_family", "subject": "other", "value": "werewolf_king", "operator": "!="},
+                                {"test": "is_family", "subject": "other", "value": "werewolf_king", "operator": "!="},
+                                {"test": "is_family", "subject": "other", "value": "werewolf_king", "operator": "!="}
+                            ]
+                        }
+                    }
+                ]
+            },
+            "minecraft:behavior.nearest_attackable_target": {
+                "priority": 3,
+                "must_see": true,
+                "must_reach": true,
+                "reselect_targets": true,
+                "within_radius": 35,
+                "must_see_forget_duration": 25,
+                "entity_types": [
+                    {
+                        "filters": {
+                            "any_of": [
+                                {"test": "is_family", "subject": "other", "value": "player"},
+                                {"test": "is_family", "subject": "other", "value": "snowgolem"},
+                                {"test": "is_family", "subject": "other", "value": "irongolem"},
+                                {"test": "is_family", "subject": "other", "value": "vampire"}
+                            ]
+                        },
+                        "max_dist": 35
+                    }
+                ]
+            },
+            "minecraft:follow_range": {"value": 35}
+        },
+        "events": {
+            "minecraft:entity_transformed": {"add": {"component_groups": ["genecro:wereager_calm", "genecro:wereager_invisible"]}},
+            "minecraft:entity_spawned": {"add": {"component_groups": ["genecro:wereager_calm"]}},
+            "genecro:start_transforming": {
+                "add": {"component_groups": ["genecro:start_villager_transformation"]},
+                "remove": {"component_groups": ["genecro:look_to_start_villager_transformation"]}
+            },
+            "genecro:stop_transforming": {
+                "add": {"component_groups": ["genecro:look_to_start_villager_transformation"]},
+                "remove": {"component_groups": ["genecro:start_villager_transformation"]}
+            },
+            "genecro:convert_to_villager": {
+                "sequence": [
+                    {
+                        "filters": {"test": "has_component", "operator": "!=", "value": "minecraft:is_baby"},
+                        "add": {"component_groups": ["genecro:convert_to_villager"]},
+                        "remove": {"component_groups": ["genecro:start_villager_transformation"]}
+                    }
+                ]
+            },
+            "genecro:become_calm": {
+                "add": {"component_groups": ["genecro:wereager_calm"]},
+                "remove": {"component_groups": ["genecro:wereager_angry"]}
+            },
+            "genecro:become_hostile": {
+                "add": {"component_groups": ["genecro:wereager_angry"]},
+                "remove": {"component_groups": ["genecro:wereager_calm"]}
+            }
+        }
+    }
+}

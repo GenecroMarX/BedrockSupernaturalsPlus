@@ -1,0 +1,309 @@
+{
+    "format_version": "1.11",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "minecraft:player",
+            "is_spawnable": false,
+            "is_summonable": false,
+            "is_experimental": false,
+            "scripts": {
+                "animate": [
+                    "buffed_vampire_head"
+                ]
+            },
+            "animations": {
+                "buffed_vampire_head": "controller.animation.buffed_vampire_head"
+            }
+        },
+        "component_groups": {
+            "player:respawn": {
+                "minecraft:mark_variant": {
+                    "value": 99999
+                },
+                "minecraft:health": {
+                    "value": 20,
+                    "max": 20
+                },
+                "minecraft:movement": {
+                    "value": 0.1
+                },
+                "minecraft:attack": {
+                    "damage": 1
+                },
+                "minecraft:spell_effects": {
+                    "remove_effects": []
+                }
+            },
+            "ammo:1": {
+                "minecraft:mark_variant": {
+                    "value": 1
+                }
+            },
+            "genecro:buffed_vampire_head_event_hold": {
+                "minecraft:health": {
+                    "value": 20,
+                    "max": 20
+                },
+                "minecraft:movement": {
+                    "value": 0.1
+                },
+                "minecraft:spell_effects": {
+                    "remove_effects": [
+                        "wither",
+                        "jump_boost",
+                        "night_vision",
+                        "resistance",
+                        "speed",
+                        "strength"
+                    ]
+                }
+            },
+            "genecro:buffed_vampire_head_event_play": {
+                "minecraft:health": {
+                    "value": 20,
+                    "max": 20
+                },
+                "minecraft:movement": {
+                    "value": 0.1
+                },
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "jump_boost",
+                            "duration": 6000,
+                            "amplifier": 2,
+                            "display_on_screen_animation": false
+                        },
+                        {
+                            "effect": "night_vision",
+                            "duration": 6000,
+                            "amplifier": 1,
+                            "display_on_screen_animation": false
+                        },
+                        {
+                            "effect": "wither",
+                            "duration": 6000,
+                            "display_on_screen_animation": false
+                        },
+                        {
+                            "effect": "resistance",
+                            "duration": 6000,
+                            "amplifier": 3,
+                            "display_on_screen_animation": false
+                        },
+                        {
+                            "effect": "speed",
+                            "duration": 6000,
+                            "amplifier": 2,
+                            "display_on_screen_animation": false
+                        },
+                        {
+                            "effect": "strength",
+                            "duration": 6000,
+                            "amplifier": 3,
+                            "display_on_screen_animation": false
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:type_family": {
+                "family": [
+                    "player"
+                ]
+            },
+            "minecraft:loot": {
+                "table": "loot_tables/empty.json"
+            },
+            "minecraft:collision_box": {
+                "width": 0.6,
+                "height": 1.8
+            },
+            "minecraft:can_climb": {},
+            "minecraft:movement": {
+                "value": 0.1
+            },
+            "minecraft:environment_sensor": [
+                {
+                    "on_environment": {
+                        "filters": {
+                            "any_of": [
+                                {
+                                    "test": "is_family",
+                                    "subject": "self",
+                                    "value": "player"
+                                }
+                            ]
+                        },
+                        "event": "player:refresh_player"
+                    }
+                },
+                {
+                    "on_environment": {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "self",
+                                    "domain": "hand",
+                                    "value": "genecro:buffed_vampire_head",
+                                    "operator": "!="
+                                }
+                            ]
+                        },
+                        "event": "genecro:buffed_vampire_head_event_hold"
+                    }
+                },
+                {
+                    "on_environment": {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_equipment",
+                                    "subject": "self",
+                                    "domain": "head",
+                                    "value": "genecro:buffed_vampire_head",
+                                    "operator": "=="
+                                }
+                            ]
+                        },
+                        "event": "genecro:buffed_vampire_head_event_play"
+                    }
+                }
+            ],
+            "minecraft:player.saturation": {
+                "value": 20
+            },
+            "minecraft:player.exhaustion": {
+                "value": 0,
+                "max": 4
+            },
+            "minecraft:player.level": {
+                "value": 0,
+                "max": 24791
+            },
+            "minecraft:player.experience": {
+                "value": 0,
+                "max": 1
+            },
+            "minecraft:breathable": {
+                "totalSupply": 15,
+                "suffocateTime": -1,
+                "inhaleTime": 3.75,
+                "generatesBubbles": false
+            },
+            "minecraft:nameable": {
+                "alwaysShow": true,
+                "allowNameTagRenaming": false
+            },
+            "minecraft:physics": {},
+            "minecraft:insomnia": {
+                "days_until_insomnia": 3
+            },
+            "minecraft:rideable": {
+                "seat_count": 2,
+                "family_types": [
+                    "parrot_tame"
+                ],
+                "pull_in_entities": true,
+                "seats": [
+                    {
+                        "position": [
+                            0.4,
+                            -0.15,
+                            0.04
+                        ],
+                        "min_rider_count": 0,
+                        "max_rider_count": 0,
+                        "lock_rider_rotation": 0
+                    },
+                    {
+                        "position": [
+                            -0.4,
+                            -0.15,
+                            0.04
+                        ],
+                        "min_rider_count": 1,
+                        "max_rider_count": 2,
+                        "lock_rider_rotation": 0
+                    }
+                ]
+            },
+            "minecraft:scaffolding_climber": {}
+        },
+        "events": {
+            "player:refresh_player": {
+                "add": {
+                    "component_groups": [
+                        "player:respawn"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "genecro:vampire_head_event_hold",
+                        "genecro:vampire_head_event_play",
+                        "genecro:buffed_vampire_head_event_hold",
+                        "genecro:buffed_vampire_head_event_play"
+                    ]
+                }
+            },
+            "minecraft:entity_spawned": {
+                "add": {
+                    "component_groups": [
+                        "player:respawn"
+                    ]
+                },
+                "remove": {}
+            },
+            "ammo:1": {
+                "remove": {
+                    "component_groups": [
+                        "ammo:1"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "ammo:1"
+                    ]
+                }
+            },
+            "ammo:2": {
+                "remove": {
+                    "component_groups": [
+                        "ammo:2"
+                    ]
+                },
+                "add": {
+                    "component_groups": [
+                        "ammo:2"
+                    ]
+                }
+            },
+            "genecro:buffed_vampire_head_event_hold": {
+                "add": {
+                    "component_groups": [
+                        "genecro:buffed_vampire_head_event_hold"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "genecro:buffed_vampire_head_event_play"
+                    ]
+                }
+            },
+            "genecro:buffed_vampire_head_event_play": {
+                "add": {
+                    "component_groups": [
+                        "genecro:buffed_vampire_head_event_play"
+                    ]
+                },
+                "remove": {
+                    "component_groups": [
+                        "genecro:buffed_vampire_head_event_hold"
+                    ]
+                }
+            }
+        }
+    }
+}

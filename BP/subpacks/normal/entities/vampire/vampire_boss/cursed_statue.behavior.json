@@ -1,0 +1,148 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:entity": {
+        "description": {
+            "identifier": "genecro:cursed_statue",
+            "is_spawnable": true,
+            "is_summonable": true,
+            "is_experimental": false
+        },
+        "component_groups": {
+            "genecro:become_p1_vboss": {
+                "minecraft:transformation": {
+                    "drop_equipment": true,
+                    "drop_inventory": true,
+                    "into": "genecro:vampire_boss_p1"
+                }
+            },
+            "genecro:start_animation": {
+                "minecraft:timer": {
+                    "looping": false,
+                    "time_down_event": {
+                        "event": "genecro:pre_p1"
+                    },
+                    "time": 10
+                },
+                "minecraft:is_shaking": {},
+                "minecraft:boss": {
+                    "hud_range": 125,
+                    "name": "Cursed Statue",
+                    "should_darken_sky": true
+                },
+                "minecraft:health": {
+                    "min": 1,
+                    "max": 20
+                },
+                "minecraft:spell_effects": {
+                    "add_effects": [
+                        {
+                            "effect": "regeneration",
+                            "duration": 10,
+                            "amplifier": 2,
+                            "visible": false
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:type_family": {
+                "family": [
+                    "cursed_statue",
+                    "inanimate",
+                    "vampire_boss"
+                ]
+            },
+            "minecraft:breathable": {
+                "totalSupply": 20,
+                "suffocateTime": 0,
+                "breathes_water": true
+            },
+            "minecraft:health": {
+                "value": 1,
+                "max": 1
+            },
+            "minecraft:damage_sensor": {
+                "triggers": {
+                    "on_damage": {
+                        "filters": {
+                            "all_of": [
+                                {
+                                    "test": "has_component",
+                                    "subject": "other",
+                                    "value": "minecraft:attack",
+                                    "operator": "=="
+                                }
+                            ]
+                        }
+                    },
+                    "deals_damage": false,
+                    "damage_multiplier": 0
+                }
+            },
+            "minecraft:interact": {
+                "interactions": [
+                    {
+                        "interact_text": "action.interact.unleash",
+                        "particle_on_start": {
+                            "particle_type": "minecraft:large_explosion"
+                        },
+                        "on_interact": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_equipment",
+                                        "subject": "other",
+                                        "domain": "hand",
+                                        "value": "genecro:purified_bloodstone_gem"
+                                    }
+                                ]
+                            },
+                            "event": "genecro:start_p1_transformation",
+                            "target": "self"
+                        },
+                        "use_item": true,
+                        "transform_to_item": "genecro:bloodstone_shards"
+                    }
+                ]
+            },
+            "minecraft:collision_box": {
+                "height": 1.8,
+                "width": 0.6
+            },
+            "minecraft:movement": {
+                "value": 0.5
+            },
+            "minecraft:physics": {
+                "has_collision": true,
+                "has_gravity": true
+            },
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": true
+            },
+            "minecraft:scale": {
+                "value": 1.25
+            },
+            "minecraft:fire_immune": true,
+            "minecraft:conditional_bandwidth_optimization": {}
+        },
+        "events": {
+            "genecro:pre_p1": {
+                "add": {
+                    "component_groups": [
+                        "genecro:become_p1_vboss"
+                    ]
+                }
+            },
+            "genecro:start_p1_transformation": {
+                "add": {
+                    "component_groups": [
+                        "genecro:start_animation"
+                    ]
+                }
+            }
+        }
+    }
+}

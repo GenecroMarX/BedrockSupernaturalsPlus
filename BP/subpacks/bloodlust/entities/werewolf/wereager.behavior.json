@@ -1,0 +1,128 @@
+{
+    "format_version": "1.16.100",
+    "minecraft:entity": {
+        "description": {"identifier": "genecro:wereager", "is_spawnable": true, "is_summonable": true, "is_experimental": false},
+        "component_groups": {
+            "genecro:look_to_start_wolf_transformation": {
+                "minecraft:environment_sensor": {
+                    "triggers": {"filters": {"test": "is_daytime", "value": false}, "event": "genecro:start_transforming"}
+                }
+            },
+            "genecro:start_wolf_transformation": {
+                "minecraft:environment_sensor": {
+                    "triggers": {"filters": {"test": "is_daytime", "value": true}, "event": "genecro:stop_transforming"}
+                },
+                "minecraft:timer": {"looping": false, "time": 1, "time_down_event": {"event": "genecro:convert_to_wolf"}}
+            },
+            "genecro:convert_to_wolf": {
+                "minecraft:transformation": {
+                    "into": "genecro:wereager_wolf",
+                    "transformation_sound": "convert_to_drowned",
+                    "drop_equipment": true,
+                    "delay": {"value": 2}
+                },
+                "minecraft:is_shaking": {}
+            }
+        },
+        "components": {
+            "minecraft:is_hidden_when_invisible": {},
+            "minecraft:type_family": {"family": ["villager", "werewolf", "wereager"]},
+            "minecraft:breathable": {
+                "total_supply": 15,
+                "suffocate_time": 0,
+                "breathes_air": true,
+                "breathes_water": false,
+                "generates_bubbles": false
+            },
+            "minecraft:health": {"value": 40, "max": 40},
+            "minecraft:experience_reward": {"on_death": 50},
+            "minecraft:conditional_bandwidth_optimization": {},
+            "minecraft:environment_sensor": {
+                "triggers": [
+                    {"filters": [{"all_of": [{"test": "is_daytime", "value": false}]}], "event": "genecro:start_transforming", "target": "self"}
+                ]
+            },
+            "minecraft:hurt_on_condition": {
+                "damage_conditions": [
+                    {"filters": {"test": "in_lava", "subject": "self", "operator": "==", "value": true}, "cause": "lava", "damage_per_tick": 4}
+                ]
+            },
+            "minecraft:damage_sensor": {
+                "triggers": [
+                    {
+                        "on_damage": {
+                            "filters": {
+                                "all_of": [
+                                    {
+                                        "test": "has_equipment",
+                                        "domain": "hand",
+                                        "operator": "==",
+                                        "value": "genecro:purifying_stake",
+                                        "subject": "other"
+                                    }
+                                ]
+                            }
+                        },
+                        "damage_multiplier": 15
+                    }
+                ]
+            },
+            "minecraft:entity_sensor": {
+                "relative_range": true,
+                "sensor_range": 32,
+                "event": "genecro:convert_to_wolf",
+                "event_filters": {
+                    "all_of": [{"test": "is_family", "operator": "==", "subject": "other", "value": "werewolf_king"}, {"test": "is_daytime"}]
+                }
+            },
+            "minecraft:hide": {},
+            "minecraft:collision_box": {"width": 0.6, "height": 1.9},
+            "minecraft:nameable": {},
+            "minecraft:movement": {"value": 0.5},
+            "minecraft:navigation.walk": {"can_path_over_water": true, "can_pass_doors": true, "can_open_doors": true, "avoid_water": true},
+            "minecraft:follow_range": {"value": 128},
+            "minecraft:annotation.open_door": {},
+            "minecraft:movement.basic": {},
+            "minecraft:jump.static": {},
+            "minecraft:can_climb": {},
+            "minecraft:dweller": {
+                "dwelling_type": "village",
+                "dweller_role": "inhabitant",
+                "update_interval_base": 60,
+                "update_interval_variant": 40,
+                "can_find_poi": true,
+                "can_migrate": true,
+                "first_founding_reward": 5
+            },
+            "minecraft:persistent": {},
+            "minecraft:behavior.float": {"priority": 0},
+            "minecraft:behavior.hide": {"priority": 0, "speed_multiplier": 0.8, "poi_type": "bed", "duration": 30},
+            "minecraft:behavior.panic": {"priority": 1, "speed_multiplier": 0.6},
+            "minecraft:behavior.move_indoors": {"priority": 6, "speed_multiplier": 0.8, "timeout_cooldown": 8},
+            "minecraft:behavior.look_at_player": {"priority": 8, "look_distance": 8, "probability": 0.02},
+            "minecraft:behavior.move_towards_dwelling_restriction": {"priority": 10, "speed_multiplier": 0.6},
+            "minecraft:behavior.random_stroll": {"priority": 10, "speed_multiplier": 0.6},
+            "minecraft:physics": {},
+            "minecraft:pushable": {"is_pushable": true, "is_pushable_by_piston": true}
+        },
+        "events": {
+            "genecro:start_transforming": {
+                "add": {"component_groups": ["genecro:start_wolf_transformation"]},
+                "remove": {"component_groups": ["genecro:look_to_start_wolf_transformation"]}
+            },
+            "genecro:stop_transforming": {
+                "add": {"component_groups": ["genecro:look_to_start_wolf_transformation"]},
+                "remove": {"component_groups": ["genecro:start_wolf_transformation"]}
+            },
+            "genecro:convert_to_wolf": {
+                "sequence": [
+                    {
+                        "filters": {"test": "has_component", "operator": "!=", "value": "minecraft:is_baby"},
+                        "add": {"component_groups": ["genecro:convert_to_wolf"]},
+                        "remove": {"component_groups": ["genecro:start_wolf_transformation"]}
+                    }
+                ]
+            }
+        }
+    }
+}
