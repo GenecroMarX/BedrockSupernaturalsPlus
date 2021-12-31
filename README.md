@@ -12,6 +12,6 @@ To contribute, simply join this Discord invite link https://discord.gg/h4Q6mfGrh
 
 The default namespace is "bsn" and the files should be properly nested as shown in .BP/ and .RP/ and their following subfolders.
 
-Make sure that you are the legitimate owner of the mobs or any other add-on elements that are to be submitted. Do not forget insert your name inside your files (as a comment) to make sure that we'll be able to track who made what.
+Make sure that you own or have the permission for the mobs or any other add-on elements that are to be submitted. Do not forget insert your name inside your files (as a comment) to make sure that we'll be able to track who made what.
 
 It is also best to ensure that the codes are working before submitting them to the repository.
