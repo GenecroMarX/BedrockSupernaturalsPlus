@@ -1,0 +1,20 @@
+{
+    "genecro:bloodstone_ore": {"textures": "bloodstone_ore", "sound": "stone"},
+    "genecro:deepslate_bloodstone_ore": {"textures": "deepslate_bloodstone_ore", "sound": "stone"},
+    "genecro:bloodstone_block": {"textures": "bloodstone_block", "sound": "metal"},
+    "genecro:purified_bloodstone_block": {"textures": "purified_bloodstone_block", "sound": "metal"},
+    "genecro:statue_spawner": {"textures": "statue_spawner", "sound": "stone"},
+    "genecro:purifier": {"textures": "purifier", "sound": "stone"},
+    "genecro:sorcery_table": {
+        "sound": "stone",
+        "textures": {
+            "down": "sorcery_table_bottom",
+            "east": "sorcery_table_side",
+            "north": "sorcery_table_front",
+            "south": "sorcery_table_side",
+            "up": "sorcery_table_top",
+            "west": "sorcery_table_side"
+        }
+    },
+    "format_version": [1, 1, 0]
+}

@@ -1,0 +1,81 @@
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "mob.vampire_general.step": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/vampire_general/step1", "volume": 1},
+                {"name": "sounds/mob/vampire_general/step2", "volume": 1},
+                {"name": "sounds/mob/vampire_general/step3", "volume": 1},
+                {"name": "sounds/mob/vampire_general/step4", "volume": 1},
+                {"name": "sounds/mob/vampire_general/step5", "volume": 1}
+            ]
+        },
+        "mob.ghoullager.death": {"category": "hostile", "sounds": [{"name": "sounds/mob/ghoullager/death", "volume": 1}]},
+        "mob.ghoullager.hurt": {
+            "category": "hostile",
+            "sounds": [{"name": "sounds/mob/ghoullager/hurt1", "volume": 1}, {"name": "sounds/mob/ghoullager/hurt2", "volume": 1}]
+        },
+        "mob.ghoullager.say": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/ghoullager/say1", "volume": 1},
+                {"name": "sounds/mob/ghoullager/say2", "volume": 1},
+                {"name": "sounds/mob/ghoullager/say3", "volume": 1}
+            ]
+        },
+        "mob.lesser_vampire.death": {"category": "hostile", "sounds": [{"name": "sounds/mob/lesser_vampire/death", "volume": 1}]},
+        "mob.lesser_vampire.hurt": {"category": "hostile", "sounds": [{"name": "sounds/mob/lesser_vampire/hurt", "volume": 1}]},
+        "mob.lesser_vampire.say": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/lesser_vampire/say1", "volume": 1},
+                {"name": "sounds/mob/lesser_vampire/say2", "volume": 1},
+                {"name": "sounds/mob/lesser_vampire/say3", "volume": 1}
+            ]
+        },
+        "mob.greater_vampire.death": {"category": "hostile", "sounds": [{"name": "sounds/mob/greater_vampire/death", "volume": 1}]},
+        "mob.greater_vampire.hurt": {
+            "category": "hostile",
+            "sounds": [{"name": "sounds/mob/greater_vampire/hurt1", "volume": 1}, {"name": "sounds/mob/greater_vampire/hurt2", "volume": 1}]
+        },
+        "mob.greater_vampire.say": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/greater_vampire/say1", "volume": 1},
+                {"name": "sounds/mob/greater_vampire/say2", "volume": 1},
+                {"name": "sounds/mob/greater_vampire/say3", "volume": 1}
+            ]
+        },
+        "mob.shapeshifter.death": {"category": "hostile", "sounds": [{"name": "sounds/mob/shapeshifter/death", "volume": 1}]},
+        "mob.shapeshifter.hurt": {
+            "category": "hostile",
+            "sounds": [{"name": "sounds/mob/shapeshifter/hurt1", "volume": 1}, {"name": "sounds/mob/shapeshifter/hurt2", "volume": 1}]
+        },
+        "mob.shapeshifter.say": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/shapeshifter/say1", "volume": 1},
+                {"name": "sounds/mob/shapeshifter/say2", "volume": 1},
+                {"name": "sounds/mob/shapeshifter/say3", "volume": 1}
+            ]
+        },
+        "mob.wereager_wolf.death": {"category": "hostile", "sounds": [{"name": "sounds/mob/werewolf/death", "volume": 1}]},
+        "mob.wereager_wolf.hurt": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/werewolf/hurt1", "volume": 1},
+                {"name": "sounds/mob/werewolf/hurt2", "volume": 1},
+                {"name": "sounds/mob/werewolf/hurt3", "volume": 1}
+            ]
+        },
+        "mob.wereager_wolf.say": {
+            "category": "hostile",
+            "sounds": [
+                {"name": "sounds/mob/werewolf/say1", "volume": 1},
+                {"name": "sounds/mob/werewolf/say2", "volume": 1},
+                {"name": "sounds/mob/werewolf/say3", "volume": 1}
+            ]
+        }
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "genecro:lesser_vampire": {
+                "events": {
+                    "ambient": "mob.lesser_vampire.say",
+                    "death": "mob.lesser_vampire.death",
+                    "hurt": "mob.lesser_vampire.hurt",
+                    "step": {"pitch": 1, "sound": "mob.vampire_general.step", "volume": 0.45}
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:greater_vampire": {
+                "events": {
+                    "ambient": "mob.greater_vampire.say",
+                    "death": "mob.greater_vampire.death",
+                    "hurt": "mob.greater_vampire.hurt",
+                    "step": {"pitch": 1, "sound": "mob.vampire_general.step", "volume": 0.45}
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:shapeshifter": {
+                "events": {
+                    "ambient": "mob.shapeshifter.say",
+                    "death": "mob.shapeshifter.death",
+                    "hurt": "mob.shapeshifter.hurt",
+                    "step": {"pitch": 1, "sound": "mob.vampire_general.step", "volume": 0.45}
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:vampire_sheep": {
+                "events": {
+                    "ambient": "mob.sheep.say",
+                    "death": "mob.sheep.say",
+                    "hurt": "mob.sheep.say",
+                    "step": {"pitch": 1, "sound": "mob.sheep.step", "volume": 0.4}
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:ghoullager": {
+                "events": {
+                    "ambient": "mob.ghoullager.say",
+                    "death": "mob.ghoullager.death",
+                    "hurt": "mob.ghoullager.hurt",
+                    "step": {"pitch": 1, "sound": "mob.vampire_general.step", "volume": 0.45}
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:bloodstone_golem": {
+                "events": {
+                    "ambient": "mob.irongolem.say",
+                    "death": "mob.irongolem.death",
+                    "hurt": "mob.irongolem.hit",
+                    "step": {"pitch": 1, "sound": "mob.irongolem.walk", "volume": 1},
+                    "throw": {"pitch": 1, "sound": "mob.irongolem.throw", "volume": 1}
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:vampire_bat": {
+                "events": {
+                    "ambient": "mob.bat.idle",
+                    "death": "mob.bat.death",
+                    "hurt": "mob.bat.hurt",
+                    "takeoff": {"pitch": [0.8, 1.2], "sound": "mob.bat.takeoff", "volume": 0.05}
+                },
+                "pitch": [0.76, 1.14],
+                "volume": 0.1
+            },
+            "genecro:vampire_bat_transformation": {
+                "events": {
+                    "ambient": "mob.bat.idle",
+                    "death": "mob.bat.death",
+                    "hurt": "mob.bat.hurt",
+                    "takeoff": {"pitch": [0.8, 1.2], "sound": "mob.bat.takeoff", "volume": 0.05}
+                },
+                "pitch": [0.76, 1.14],
+                "volume": 0.1
+            },
+            "genecro:wereager": {
+                "events": {
+                    "ambient": "mob.villager.idle",
+                    "death": "mob.villager.death",
+                    "death.to.zombie": "mob.villager.death",
+                    "haggle": "mob.villager.haggle",
+                    "haggle.no": "mob.villager.no",
+                    "haggle.yes": "mob.villager.yes",
+                    "hurt": "mob.villager.hit"
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            },
+            "genecro:wereager_wolf": {
+                "events": {
+                    "ambient": "mob.wereager_wolf.say",
+                    "death": "mob.wereager_wolf.death",
+                    "hurt": "mob.wereager_wolf.hurt",
+                    "step": {"pitch": 1, "sound": "mob.vampire_general.step", "volume": 0.45}
+                },
+                "pitch": [0.75, 0.9],
+                "volume": 1
+            },
+            "genecro:hunter": {
+                "events": {
+                    "ambient": "mob.wanderingtrader.idle",
+                    "death": "mob.wanderingtrader.death",
+                    "disappeared": "mob.wanderingtrader.disappeared",
+                    "drink": "mob.wanderingtrader.drink_potion",
+                    "haggle": "mob.wanderingtrader.haggle",
+                    "haggle.no": "mob.wanderingtrader.no",
+                    "haggle.yes": "mob.wanderingtrader.yes",
+                    "hurt": "mob.wanderingtrader.hurt",
+                    "reappeared": "mob.wanderingtrader.reappeared"
+                },
+                "pitch": [0.8, 1.2],
+                "volume": 1
+            }
+        }
+    }
+}

@@ -1,0 +1,74 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bloodstone_golem",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [0, 1.5, 0]
+			},
+			"bones": [
+				{
+					"name": "body",
+					"pivot": [0, 31, 0],
+					"cubes": [
+						{"origin": [-7, 18, -5], "size": [14, 11, 9], "uv": [4, 42]},
+						{"origin": [-5.5, 14, -3], "size": [11, 4, 6], "inflate": 0.5, "uv": [0, 70]}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 31, -2],
+					"cubes": [
+						{"origin": [-6, 29, -6.5], "size": [12, 8, 8], "uv": [0, 0]},
+						{"origin": [-6.15, 27, -7], "size": [12.3, 4, 6], "uv": [0, 20]}
+					],
+					"locators": {
+						"lead": [0, 31, -2]
+					}
+				},
+				{
+					"name": "arm0",
+					"parent": "body",
+					"pivot": [0, 31, 0],
+					"cubes": [
+						{"origin": [-12, 1.5, -3], "size": [5, 28, 6], "uv": [60, 21]},
+						{"origin": [-7.5, 29.5, -8.75], "size": [0, 5, 6], "pivot": [0, 0, 0], "rotation": [0, 37.5, 0], "uv": [42, 28]},
+						{"origin": [-7.5, 29.5, 2.75], "size": [0, 5, 6], "pivot": [0, 0, 0], "rotation": [0, -37.5, 0], "uv": [42, 28]}
+					]
+				},
+				{
+					"name": "arm1",
+					"parent": "body",
+					"pivot": [0, 31, 0],
+					"cubes": [
+						{"origin": [7, 1.5, -3], "size": [5, 28, 6], "uv": [60, 58]},
+						{"origin": [7.5, 29.5, -8.75], "size": [0, 5, 6], "pivot": [0, 0, 0], "rotation": [0, -37.5, 0], "uv": [42, 28]},
+						{"origin": [7.5, 29.5, 2.75], "size": [0, 5, 6], "pivot": [0, 0, 0], "rotation": [0, 37.5, 0], "uv": [42, 28]}
+					]
+				},
+				{
+					"name": "leg0",
+					"parent": "body",
+					"pivot": [-4, 13, 0],
+					"cubes": [
+						{"origin": [-6.5, 0, -3], "size": [6, 14, 5], "uv": [60, 1]}
+					]
+				},
+				{
+					"name": "leg1",
+					"parent": "body",
+					"pivot": [5, 13, 0],
+					"mirror": true,
+					"cubes": [
+						{"origin": [0.5, 0, -3], "size": [6, 14, 5], "uv": [60, 1]}
+					]
+				}
+			]
+		}
+	]
+}

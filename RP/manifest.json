@@ -1,0 +1,19 @@
+{
+    "format_version": 2,
+    "header": {
+        "name": "Genecro's Supernaturals RP",
+        "description": "Resource pack for Genecro's Supernaturals, created by §b@GenecroMarcus §fonly at §aMCPEDL§f.",
+        "uuid": "b672152c-89f1-a1da-5304-b1f0d31f39ca",
+        "version": [2, 0, 0],
+        "min_engine_version": [1, 16, 0]
+    },
+    "metadata": {"authors": ["G3NECRX"], "generated_with": {"bridge": ["2.1.5"]}},
+    "modules": [
+        {
+            "description": "Resource pack for Genecro's Supernaturals.",
+            "type": "resources",
+            "uuid": "8aeb5c4c-223f-177b-aee2-5fe55caf4397",
+            "version": [2, 0, 0]
+        }
+    ]
+}

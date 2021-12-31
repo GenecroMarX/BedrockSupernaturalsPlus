@@ -1,0 +1,118 @@
+## Bloodstone Items
+
+item.genecro:bloodstone_shards.name=Bloodstone Shards
+item.genecro:bloodstone_gem.name=Bloodstone Gem
+
+item.genecro:purified_bloodstone_shards.name=Purified Bloodstone Shards
+item.genecro:purified_bloodstone_gem.name=Purified Bloodstone Gem
+
+tile.genecro:bloodstone_ore.name=Bloodstone Ore
+tile.genecro:deepslate_bloodstone_ore.name=Deepslate Bloodstone Ore
+tile.genecro:bloodstone_block.name=Block of Bloodstone
+tile.genecro:purified_bloodstone_block.name=Purified Block of Bloodstone
+
+## Vampire Items
+
+item.genecro:condensed_vampire_specimen.name=Condensed Vampire Specimen
+
+## Werewolf Items
+
+item.genecro:werewolf_claws.name=Werewolf Claws
+
+## Workbenches
+
+tile.genecro:purifier.name=Purifier
+tile.genecro:sorcery_table.name=Sorcery Table
+
+## Weapons
+
+item.genecro:purifying_stake.name=Purifying Stake
+
+item.genecro:holy_water.name=Holy Water
+
+item.genecro:vampire_stake.name=Vampire Stake
+
+## Totems
+
+item.genecro:ominous_totem.name=Ominous Totem
+
+item.genecro:purifier_totem.name=Purifier Totem
+
+## Hunter
+
+item.spawn_egg.entity.genecro:hunter.name=Spawn Wandering Hunter
+entity.genecro:hunter.name=Wandering Hunter
+
+## Lesser Vampire
+
+item.spawn_egg.entity.genecro:lesser_vampire.name=Spawn Lesser Vampire
+entity.genecro:lesser_vampire.name=Lesser Vampire
+
+## Phaser
+
+item.spawn_egg.entity.genecro:phaser.name=Spawn Phaser Vampire
+entity.genecro:phaser.name=Phaser Vampire
+
+## Shapeshifter
+
+item.spawn_egg.entity.genecro:shapeshifter.name=Spawn Shapeshifter Vampire
+entity.genecro:shapeshifter.name=Shapeshifter Vampire
+
+## Vampire Sheep
+
+entity.genecro:shapeshifter.name=Vampire Sheep
+
+## Greater Vampire
+
+item.spawn_egg.entity.genecro:greater_vampire.name=Spawn Greater Vampire
+entity.genecro:greater_vampire.name=Greater Vampire
+
+## Ghoullager
+
+item.spawn_egg.entity.genecro:ghoullager.name=Spawn Ghoullager
+entity.genecro:ghoullager.name=Ghoullager
+
+## Cursed Statue
+
+item.spawn_egg.entity.genecro:cursed_statue.name=Spawn Cursed Statue
+entity.genecro:cursed_statue.name=Cursed Statue
+
+## Vampire Boss
+
+tile.genecro:statue_spawner.name=Statue Spawner
+entity.genecro:vampire_boss_p1.name=Vampire Boss
+entity.genecro:vampire_boss_p2.name=Vampire Boss
+entity.genecro:vampire_bat_transformation.name=Vampire Boss
+
+## Vampire Bat
+
+entity.genecro:vampire_bat.name=Vampire Bat
+
+## Bloodstone Golem
+
+item.spawn_egg.entity.genecro:bloodstone_golem.name=Summon Bloodstone Golem
+entity.genecro:bloodstone_golem.name=Bloodstone Golem
+
+## Wereager
+
+item.spawn_egg.entity.genecro:wereager.name=Spawn Wereager
+entity.genecro:wereager.name=Wereager
+entity.genecro:wereager_wolf.name=Wereager Wolf
+
+## Werewolf
+
+item.spawn_egg.entity.genecro:werewolf.name=Spawn Werewolf
+entity.genecro:werewolf.name=Werewolf
+
+## Elite Wolfman
+
+item.spawn_egg.entity.genecro:elite_wolfman.name=Spawn Elite Wolfman
+entity.genecro:elite_wolfman.name=Elite Wolfman
+
+## Werewolf King
+
+item.spawn_egg.entity.genecro:werewolf_king.name=Spawn Werewolf King
+entity.genecro:werewolf_king.name=Werewolf King
+entity.genecro:werewolf_king_transformation.name=Werewolf King
+entity.genecro:werewolf_king_p1.name=Werewolf King
+entity.genecro:werewolf_king_p2.name=Werewolf King
