@@ -1,0 +1,29 @@
+{
+    "type": "minecraftBedrock",
+    "name": "Genecro's Supernaturals",
+    "namespace": "genecro",
+    "authors": ["G3NECRX"],
+    "targetVersion": "1.17.40",
+    "description": "Survive and fend off the Supernaturals!",
+    "experimentalGameplay": {
+        "additionalModdingCapabilities": true,
+        "creationOfCustomBiomes": true,
+        "experimentalMolangFeatures": true,
+        "holidayCreatorFeatures": true,
+        "upcomingCreatorFeatures": true
+    },
+    "packs": {"behaviorPack": "./BP",
+             "resourcePack": "./RP"},
+    "compiler": {
+        "plugins": [
+            "typeScript",
+            "entityIdentifierAlias",
+            "customEntityComponents",
+            "customItemComponents",
+            "customBlockComponents",
+            "customCommands",
+            "moLang",
+            ["simpleRewrite", {"packName": "Genecro's Supernaturals"}]
+        ]
+    }
+}
